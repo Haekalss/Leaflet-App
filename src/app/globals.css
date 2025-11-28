@@ -1,0 +1,43 @@
+@import "tailwindcss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #ffffff;
+  color: #171717;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Hide Next.js development overlay (resize/devtools controls) in dev environment */
+/* This hijack is only for dev environment to avoid UI clutter; remove in production */
+.resize-container.bottom-left,
+.resize-container.bottom-right,
+.__next_dev_indicator,
+.__next_dev_indicator *,
+[data-nextjs-devtools],
+[data-nextjs-devtools] * {
+  display: none !important;
+}
+
+/* Hide other potential Next devtools elements that can appear in dev */
+#nextjs-dev-tools-menu,
+[data-nextjs-devtools-panel-overlay],
+[data-nextjs-devtools-panel-footer],
+[data-nextjs-error-overlay-footer],
+[data-nextjs-error-overlay-nav],
+[data-next-mark],
+[data-issues-open],
+rt\:root .resize-container
+{
+  display: none !important;
+}
+
+/* Hide any remaining Leaflet attribution controls */
+.leaflet-control-attribution,
+.leaflet-control-attribution * {
+  display: none !important;
+}
